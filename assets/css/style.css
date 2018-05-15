@@ -86,3 +86,8 @@
 #fontcolor {
     color: #fdfdfd;
 }
+
+#loginModal {
+    position: relative;
+    right: 144px;
+}

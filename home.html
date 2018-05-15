@@ -69,9 +69,11 @@
             <!-- Links -->
 
             <form class="form-inline">
+             <div class= "d-flex justify-content-end">
                 <div class="md-form my-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
                 </div>
+             </div>
             </form>
         </div>
         <!-- Collapsible content -->
@@ -95,70 +97,117 @@
                         </span>
                     </div>
                 </div>
+                <div class="text-center">
+                        <a href="" class="btn btn-warning btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm" id="loginModal"> LogIn/Register</a>
+                </div>
             </div>
         </div>
     </div>
 
 
-    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <!--Modal: Contact form-->
-        <div class="modal-dialog cascading-modal" role="document">
+    <!--other modal -->
 
+<!--Modal: Login / Register Form-->
+<div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal" role="document">
             <!--Content-->
             <div class="modal-content">
-
-                <!--Header-->
-                <div class="modal-header primary-color white-text">
-                    <h4 class="title">
-                        <i class="fa fa-pencil"></i> Contact form</h4>
-                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <!--Body-->
-                <div class="modal-body">
-
-                    <!-- Material input name -->
-                    <div class="md-form form-sm">
-                        <i class="fa fa-envelope prefix"></i>
-                        <input type="text" id="materialFormNameModalEx1" class="form-control form-control-sm">
-                        <label for="materialFormNameModalEx1">Your name</label>
+    
+                <!--Modal cascading tabs-->
+                <div class="modal-c-tabs">
+    
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs tabs-2 light-blue darken-3" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fa fa-user mr-1"></i> Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fa fa-user-plus mr-1"></i> Register</a>
+                        </li>
+                    </ul>
+    
+                    <!-- Tab panels -->
+                    <div class="tab-content">
+                        <!--Panel 7-->
+                        <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+    
+                            <!--Body-->
+                            <div class="modal-body mb-1">
+                                <div class="md-form form-sm mb-5">
+                                    <i class="fa fa-envelope prefix"></i>
+                                    <input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+                                </div>
+    
+                                <div class="md-form form-sm mb-4">
+                                    <i class="fa fa-lock prefix"></i>
+                                    <input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <button class="btn btn-warning">Log in <i class="fa fa-sign-in ml-1"></i></button>
+                                </div>
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <div class="options text-center text-md-right mt-1">
+                                    <p>Not a member? <a href="#" class="orange-text">Sign Up</a></p>
+                                    <p>Forgot <a href="#" class="orange-text">Password?</a></p>
+                                </div>
+                                <button type="button" class="btn btn-outline-warning waves-effect ml-auto" data-dismiss="modal">Close</button>
+                            </div>
+    
+                        </div>
+                        <!--/.Panel 7-->
+    
+                        <!--Panel 8-->
+                        <div class="tab-pane fade" id="panel8" role="tabpanel">
+    
+                            <!--Body-->
+                            <div class="modal-body">
+                                <div class="md-form form-sm mb-5">
+                                    <i class="fa fa-envelope prefix"></i>
+                                    <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+                                </div>
+    
+                                <div class="md-form form-sm mb-5">
+                                    <i class="fa fa-lock prefix"></i>
+                                    <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+                                </div>
+    
+                                <div class="md-form form-sm mb-4">
+                                    <i class="fa fa-lock prefix"></i>
+                                    <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                                    <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+                                </div>
+    
+                                <div class="text-center form-sm mt-2">
+                                    <button class="btn btn-info">Sign up <i class="fa fa-sign-in ml-1"></i></button>
+                                </div>
+    
+                            </div>
+                            <!--Footer-->
+                            <div class="modal-footer">
+                                <div class="options text-right">
+                                    <p class="pt-1">Already have an account? <a href="#" class="blue-text">Log In</a></p>
+                                </div>
+                                <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        <!--/.Panel 8-->
                     </div>
-
-                    <!-- Material input email -->
-                    <div class="md-form form-sm">
-                        <i class="fa fa-lock prefix"></i>
-                        <input type="password" id="materialFormEmailModalEx1" class="form-control form-control-sm">
-                        <label for="materialFormEmailModalEx1">Your email</label>
-                    </div>
-
-                    <!-- Material input subject -->
-                    <div class="md-form form-sm">
-                        <i class="fa fa-tag prefix"></i>
-                        <input type="text" id="materialFormSubjectModalEx1" class="form-control form-control-sm">
-                        <label for="materialFormSubjectModalEx1">Subject</label>
-                    </div>
-
-                    <!-- Material textarea message -->
-                    <div class="md-form form-sm">
-                        <i class="fa fa-pencil prefix"></i>
-                        <textarea type="text" id="materialFormMessageModalEx1" class="md-textarea form-control"></textarea>
-                        <label for="materialFormMessageModalEx1">Your message</label>
-                    </div>
-
-                    <div class="text-center mt-4 mb-2">
-                        <button class="btn btn-primary">Send
-                            <i class="fa fa-send ml-2"></i>
-                        </button>
-                    </div>
-
+    
                 </div>
             </div>
             <!--/.Content-->
         </div>
-        <!--/Modal: Contact form-->
     </div>
-
+    <!--Modal: Login / Register Form-->
+    
+ 
+                    
 
 </body>
 
