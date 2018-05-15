@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,21 +21,145 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
 
-    <link rel ="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>LocalTime</title>
 </head>
 
 <body>
-    <div class = "slider">
-        <div class = "load">
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg #ffab40 orange accent-2">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">Navbar</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+    
+                Dropdown -->
+            <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+    
+            </ul> -->
+            <!-- Links -->
+
+            <form class="form-inline">
+                <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
         </div>
-        <div class = "content">
-            <div class = "principal">
-                <h1>Local Time</h1>
+        <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+
+    <div class="slider">
+        <div class="load">
+        </div>
+        <div class="content">
+            <div class="principal">
+                <h1 class="animated rollIn">Local Time</h1>
                 <p>Lorem ipsum lorem ipsum Lorem ipsum</p>
+
+                <div class="input-group md-form form-sm form-2 pl-0">
+                    <input class="form-control my-0 py-1 amber-border" type="text" placeholder="Search" aria-label="Search" id="fontcolor">
+                    <div class="input-group-append">
+                        <span class="input-group-text amber lighten-3" id="basic-text1">
+                            <i class="fa fa-search text-grey"  aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-      
+
+
+    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <!--Modal: Contact form-->
+        <div class="modal-dialog cascading-modal" role="document">
+
+            <!--Content-->
+            <div class="modal-content">
+
+                <!--Header-->
+                <div class="modal-header primary-color white-text">
+                    <h4 class="title">
+                        <i class="fa fa-pencil"></i> Contact form</h4>
+                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+
+                    <!-- Material input name -->
+                    <div class="md-form form-sm">
+                        <i class="fa fa-envelope prefix"></i>
+                        <input type="text" id="materialFormNameModalEx1" class="form-control form-control-sm">
+                        <label for="materialFormNameModalEx1">Your name</label>
+                    </div>
+
+                    <!-- Material input email -->
+                    <div class="md-form form-sm">
+                        <i class="fa fa-lock prefix"></i>
+                        <input type="password" id="materialFormEmailModalEx1" class="form-control form-control-sm">
+                        <label for="materialFormEmailModalEx1">Your email</label>
+                    </div>
+
+                    <!-- Material input subject -->
+                    <div class="md-form form-sm">
+                        <i class="fa fa-tag prefix"></i>
+                        <input type="text" id="materialFormSubjectModalEx1" class="form-control form-control-sm">
+                        <label for="materialFormSubjectModalEx1">Subject</label>
+                    </div>
+
+                    <!-- Material textarea message -->
+                    <div class="md-form form-sm">
+                        <i class="fa fa-pencil prefix"></i>
+                        <textarea type="text" id="materialFormMessageModalEx1" class="md-textarea form-control"></textarea>
+                        <label for="materialFormMessageModalEx1">Your message</label>
+                    </div>
+
+                    <div class="text-center mt-4 mb-2">
+                        <button class="btn btn-primary">Send
+                            <i class="fa fa-send ml-2"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+        <!--/Modal: Contact form-->
+    </div>
+
+
 </body>
+
 </html>
