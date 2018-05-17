@@ -99,15 +99,17 @@
 .reviews{
     text-align: center;
     margin-bottom: 50px;
+    color: #fff;
 }
 
 .testimonials{
     margin-top: 120px;
-    background-image: url("../img/background4.jpg");
+    background-image: url("../img/background5.jpg");
     padding-top: 50px;
     padding-bottom: 50px;
     color: rgb(15, 1, 1);
     background-attachment: fixed; /*allows the image to scroll */
+    color: #fff;
 }
 
 .testimonials cite img{
@@ -120,4 +122,5 @@
 .testimonials p {
     line-height: 25px;
     text-align: justify;
+    color: #fff;
 }
