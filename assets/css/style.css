@@ -124,3 +124,10 @@
     text-align: justify;
     color: #fff;
 }
+
+/*Google Button */
+
+  #googleLogo {
+    position: relative;
+    left: 10px;
+  }
