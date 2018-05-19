@@ -21,6 +21,15 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
 
+    <!-- Date picker scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>LocalTime</title>
 </head>
@@ -52,11 +61,24 @@
                  <div class="collapse navbar-collapse" id="basicExampleNav">
             <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hello, User</a>
+                    <!-- <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hello, User</a> -->
+
                     <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Edit Profile</a>
-                        <a class="dropdown-item" href="#">Edit Calendar</a>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <!-- <a class="dropdown-item" href="#">Edit Profile</a> -->
+                        <li class="nav-item dropdown">
+                                <a href="#insurance-head-section" class="nav-link dropdown-toggle" data-toggle="dropdown">Hello, New User</a>
+                                <div class="dropdown-menu">
+                                  <!-- <a href="" class="dropdown-item"></a> -->
+                                  <a href="#profile" class="dropdown-item"
+                                  data-toggle="modal" data-target="#profile">Edit Profile</a>
+                                  <a href="#calendar" class="dropdown-item" data-toggle="modal" data-target="#calendar">Edit Calendar</a>
+                                  <a href="" class="dropdown-item">Logout
+                                        <form action="/logout" method="POST" name="logout" id="logoutlink" type= "submit" for="logout">
+                                  </a>
+                                </div>
+                              </li>
+                        <!-- <a class="dropdown-item" href="#">Edit Calendar</a>
+                        <a class="dropdown-item" href="#">Logout</a> -->
                     </div>
                 </li>
     
@@ -68,6 +90,92 @@
 
     </nav>
     <!--/.Navbar-->
+
+    <!--Modal for Editing Profile -->
+
+    <div class="modal" id="profile">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title"></h5>
+                  <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div class="list-group">
+                    <!-- <div class="d-flex w-100 justify-content-between"> -->
+                      <h6>Your Profile</h6>
+                      <div class="md-form form-sm mb-5">
+                            <i class="fa fa-user prefix"></i>
+                            <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput12">First Name</label>
+                        </div>
+                        <div class="md-form form-sm mb-5">
+                            <i class="fa fa-user prefix"></i>
+                            <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput12">Last Name</label>
+                        </div>
+                        <div class="md-form form-sm mb-5">
+                            <i class="fa fa-envelope prefix"></i>
+                            <input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+                        </div>
+
+                        <div class="md-form form-sm mb-5">
+                            <i class="fa fa-lock prefix"></i>
+                            <input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+                        </div>
+
+                        <div class="md-form form-sm mb-4">
+                            <i class="fa fa-lock prefix"></i>
+                            <input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+                            <label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+                        </div>
+            
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-warning" data-dismiss="modal">Update</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<!-- Profile Modal ENDS -->
+
+<!-- Calendar Modal BEGINS -->
+
+<div class="modal" id="calendar">
+        <div class="modal-dialog">
+          <div class="modal-content" id="calendarmodalcontent">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class="list-group">
+                <!-- <div class="d-flex w-100 justify-content-between"> -->
+                    <!-- <h6>Your Profile</h6> -->
+
+                <!-- <input type="text" name="daterange" value="01/01/2018 - 01/15/2018"/> -->
+                <input type="text" class="form-control col-md-7 col-xs-12 date-picker" id="duration" name="daterange" placeholder="Program duration" required="required" />
+                       
+                  
+                  <br>
+                  <br>
+                  <br>
+
+                  <div class="modal-footer" id="modalfootercalendar">
+                        <button class="btn btn-warning" data-dismiss="modal">Save-Update</button>
+                  </div> 
+                </div>
+              </div>    
+            </div>
+          </div>
+        </div>             
+</div>
+
+<!-- Calendar Modal ENDS -->
 
     <div class="slider">
         <div class="load">
@@ -100,6 +208,9 @@
 
 
       </section>
+
+      
 </body>
+<script type="text/javascript" src="assets/js/localtime.js"></script>
 
 </html>

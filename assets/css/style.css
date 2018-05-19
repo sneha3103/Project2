@@ -131,3 +131,24 @@
     position: relative;
     left: 10px;
   }
+
+  /* Calendar css code */
+  i.glyphicon-calendar {
+    bottom: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 147px;
+    top: 20px;
+}
+
+#calendarmodalcontent {
+    position: relative;
+    height: 472px;
+    width: 600px;  
+}
+
+#modalfootercalendar {
+    position: relative;
+    margin-top: 163px;
+    top: 46px;
+}
